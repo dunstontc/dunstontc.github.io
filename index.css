@@ -9,7 +9,7 @@
 html, body {
   padding: 0px;
   margin: 0px;
-  min-height: 100vh; }
+  height: 100vh; }
 
 body {
   background: var(--background-color);
@@ -67,7 +67,7 @@ footer {
   display: grid;
   grid-template-rows: 200px 1fr 100px;
   grid-template-columns: auto 1fr;
-  height: 100vh;
+  height: 100%;
   min-width: 330px; }
 
 header {
