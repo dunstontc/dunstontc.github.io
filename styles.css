@@ -1,0 +1,16 @@
+:root {
+  --title-font: 'Sarina', cursive;
+  --body-font : 'Play', sans-serif;
+  --main-color      : #FF6666;
+  --accent-color    : #569CD6;
+  --background-color: #333333;
+}
+
+html, body {
+  padding: 0px;
+  margin : 0px;
+}
+
+h1 {
+  font-family: var(--title-font);
+}
