@@ -10,13 +10,13 @@
 
   .btn-clay {
     font-size: 1em; 
-    &:hover,
-    &:active {
-      transform     : translateX(0.25em) translateY(0.25em);
-      box-shadow    : -0.5em 0.5em 0.1em black;
-      border        : 1px double ghostwhite;
-      font-size     : 1.1em;
-    }   
+    // &:hover,
+    // &:active {
+    //   // transform     : translateX(0.25em) translateY(0.25em);
+    //   // box-shadow    : -0.5em 0.5em 0.1em black;
+    //   // border        : 1px double ghostwhite;
+    //   // font-size     : 1.1em;
+    // }   
   }
 
   .button-box {

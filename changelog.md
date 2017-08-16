@@ -1,6 +1,9 @@
 # Changelog
 
-## v.0.1.0
+## v1.0.0-alpha.1
+  - Transfered styles from old site, need to make buttons responsive (or just redesign the whole thing)
+
+## v0.1.0
 - Added:
   - .gitignore
   - readme.md
