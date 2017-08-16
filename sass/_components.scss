@@ -1,0 +1,45 @@
+.btn-clay {
+  // min-height:4em;
+  // min-width:6.47em;
+  font-size       : 0.75em;
+  // font-weight: bold;
+  padding         : 0.75em;
+  text-align      : center;
+  color           : ghostwhite;
+  background-color: var(--main-color);
+  border          : 4px double ghostwhite;
+  outline         : none;
+  // margin-top        : 15%;
+  // margin-bottom     : 15%;
+  border-radius     : 3px;
+  font-family       : var(--body-font);
+  letter-spacing    : normal;
+  white-space       : nowrap;
+  transition        : all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  // transition        : color 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    &:hover,
+    &:active {
+      transform     : translateX(0.25em) translateY(0.25em);
+      box-shadow    : -0.5em 0.5em 0.1em black;
+      border        : 1px double ghostwhite;
+      font-size     : 0.8em;
+    }
+}
+
+
+.button-box {
+  flex-basis      : 0;
+  flex-grow       : 0.21;
+  // margin-top      : 20%;
+  // margin-bottom   : 20%;
+  margin          : 5% 5% 5% 5%;
+  // flex: 0 0 auto;
+  // width: auto
+  display         : flex;
+  flex-flow       : row nowrap;
+  justify-content : center;
+}
+
+.svg-badge {
+  margin          : 0px 8px 0px 8px;
+}

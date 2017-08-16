@@ -1,0 +1,26 @@
+{
+  "name": "dunstontc.github.io",
+  "version": "0.1.0",
+  "description": "repo for dtc.github.io on github pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon",
+    "scss": "sass ./sass/index.scss ./index.css --sourcemap=none",
+    "old-scss": "sass ./old-sass/index.scss ./index.css --sourcemap=none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunstontc/dunstontc.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "github",
+    "pages"
+  ],
+  "author": "Clay D. <dunstontc@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunstontc/dunstontc.github.io/issues"
+  },
+  "homepage": "https://github.com/dunstontc/dunstontc.github.io#readme"
+}
