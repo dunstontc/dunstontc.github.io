@@ -16,20 +16,18 @@
     <v-app dark>
       <v-navigation-drawer
         temporary
-        :mini-variant="miniVariant"
-        :clipped="clipped"
         v-model="drawer">
         <v-list>
           <v-list-item
-            v-for="(item, i) in items"
+            v-for="i in itemz"
             :key="i"
           >
-            <v-list-tile value="true">
+            <v-list-tile value="true" @click="snackbar = true">
               <v-list-tile-action>
-                <v-icon  v-html="item.icon"></v-icon>
+                <v-icon  v-html="i.icon"></v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                <v-list-tile-title v-text="i.title"></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list-item>
@@ -40,10 +38,11 @@
         <v-toolbar-title v-text="title"></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat class="primary--text"> Home </v-btn>
-          <v-btn flat> About </v-btn>
-          <v-btn flat> Contact </v-btn>
-          <v-btn flat> ᕕ( ᐛ )ᕗ </v-btn>
+          <v-btn flat class="primary--text" @click="snackbar = true"> Home </v-btn>
+          <!-- <v-btn flat class="primary--text"> My Resume </v-btn> -->
+          <!-- <v-btn flat> About </v-btn> -->
+          <!-- <v-btn flat> Contact </v-btn> -->
+          <!-- <v-btn flat> ᕕ( ᐛ )ᕗ </v-btn> -->
         </v-toolbar-items>
       </v-toolbar>
       <main>
@@ -59,18 +58,19 @@
           <v-layout column align-center justify-center>
             <v-flex xs12 md10 class="mt-5">
               <v-card dark>
-                <v-card-title primary-title>
-                  <div class="headline display-4"> About Me </div>
-                </v-card-title>
+                  <v-toolbar class="primary">
+                      <v-toolbar-title class="secondary--text"> About Me </v-toolbar-title>
+                    </v-toolbar>
                 <v-divider class="indigo lighten-1"></v-divider>
                 <v-card-text>
-                  <ul>
+                  <ul class="mt-2">
                     <li> I don't believe in tab characters. </li>
                     <li> Thoroughly enjoy the tab button. </li>
                     <li> I tend to accumulate more tabs than my browser knows what to do with. </li>
                     <li> I believe that the only tabs one should leave open are bar tabs (Assuming that one is someone other than oneself).</li>
                     <li> The secret ingredient in my world-famous div soup is love. </li>
-                    <li> I have a <strong>intense</strong> interest in Latin placeholder text... </li>
+                    <!-- <li> I have a <strong>intense</strong> interest in Latin placeholder text... </li> -->
+                    <li> There's nothing I love more than a good list. </li>
                   </ul>
                   <!-- <v-subheader> Skills </v-subheader>
                   <ul>
@@ -84,11 +84,13 @@
                   <ul>
                     <li>  </li>
                   </ul> -->
+                  <br>
+                  <v-btn class="primary secondary--text" tag="a" href="https://drive.google.com/file/d/0B4VVqr5z6UhjQi1OTFdwVUMtdTg/view" target="_blank"> My Resume </v-btn>
                 </v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
-  <!-- ======================================================================= -->        
+<!-- ======================================================================= -->        
           <v-layout row align-center justify-center>
               <v-flex xs12 md8 class="mt-5">
                 <v-card>
@@ -130,11 +132,26 @@
                         <v-list-tile-sub-title> Birmingham, AL 35226 </v-list-tile-sub-title>
                       </v-list-tile-content>
                     </v-list-tile>
+                    <v-divider inset></v-divider>         
                   </v-list>
+                  <v-container fluid>
+                      <v-layout justify-space-around>
+                        <span class="group">
+                            <v-btn
+                                v-for="i in accounts" :key="i"
+                                icon tag="a" :href="i.url"
+                                class="ml-3 mr-3">
+                                <v-icon medium class="white--text">
+                                  {{i.icon}}  
+                                </v-icon> 
+                            </v-btn>
+                        </span>
+                      </v-layout>
+                  </v-container>
                 </v-card>
               </v-flex>
             </v-layout>
-  <!-- ======================================================================= -->
+<!-- ======================================================================= -->
           <v-layout row align-center justify-center>
             <v-flex xs12 sm6  class="mt-5">
               <v-card>
@@ -165,22 +182,22 @@
                   </v-text-field>
                   <!-- <small>*indicates required field</small> -->
                   <v-layout column nowrap align-center class="pb-2">  
-                    <v-btn large class="primary text-xs-center"> Send </v-btn>    
+                    <v-btn disabled class="text-xs-center"> Send </v-btn>    
                   </v-layout>
                 </v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
-  <!-- ======================================================================= -->
+<!-- ======================================================================= -->
           <v-layout column align-center justify-center>      
               <v-flex xs11 class="mt-5">
                 <v-card class="grid">
                   <v-toolbar class="primary elevation-1">
                     <v-toolbar-title class="secondary--text">Technology </v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-btn icon light>
+                    <!-- <v-btn icon light>
                       <v-icon class="secondary--text">search</v-icon>
-                    </v-btn>
+                    </v-btn> -->
                   </v-toolbar>
                   <!-- <v-subheader>Test</v-subheader> -->
                   <v-container fluid grid-list-md class="mt-4">
@@ -198,6 +215,7 @@
             </v-layout>
         </v-container>
       </main>
+<!-- ======================================================================= -->      
       <v-footer class="pa-3 mt-5 primary secondary--text">
         <div> Made with &nbsp;</div>
         <div  class="pt-1">
@@ -217,6 +235,15 @@
         <v-spacer></v-spacer>
         <div> &copy; {{ new Date().getFullYear() }} </div>
       </v-footer>
+<!-- ======================================================================= -->      
+      <v-snackbar
+        timeout="2000"
+        top
+        vertical
+        class="primary mt-2"
+        v-model="snackbar">
+        <v-btn flat class="secondary--text" @click.native="snackbar = false"> Welcome Home <3 </v-btn>
+      </v-snackbar>
     </v-app>
   </div>
 
@@ -234,27 +261,27 @@
       data: {
         title: ' ',
         drawer     : false,
-        clipped    : false,
-        miniVariant: false,
+        snackbar   : false,
         logos: logoArray,
         accounts: [
-          { icon: 'mdi-github-circle',   title: 'GitHub' },          
-          { icon: 'mdi-linkedin-box',    title: 'LinkedIn' },          
-          { icon: 'mdi-facebook-box',    title: 'Facebook' },          
-          { icon: 'mdi-twitter-box',     title: 'Twitter' },          
-          { icon: 'mdi-google-plus-box', title: 'Google +' },          
-          { icon: 'mdi-tumblr',          title: 'Tumblr' },          
-          { icon: 'mdi-dribbble',        title: 'Dribbble' },          
-          { icon: 'mdi-codepen',         title: 'Codepen' },          
-          { icon: 'mdi-playstation',     title: 'PSN' },          
-          { icon: 'mdi-xbox',            title: 'Xbox Live' },          
+          { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },          
+          { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },          
+          { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },          
+          { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },          
+          // { icon: 'mdi-twitter-box',     title: 'Twitter' },          
+          // { icon: 'mdi-google-plus-box', title: 'Google +' },          
+          // { icon: 'mdi-tumblr',          title: 'Tumblr' },          
+          // { icon: 'mdi-dribbble',        title: 'Dribbble' },          
+          // { icon: 'mdi-playstation',     title: 'PSN' },          
+          // { icon: 'mdi-xbox',            title: 'Xbox Live' },          
         ],
-        items: [
+        itemz: [
           { icon: 'home',                     title: 'Home' },
-          { icon: 'mdi-certificate',          title: 'Certifications' },
-          { icon: 'mdi-gmail',                title: 'Email' },
-          { icon: 'mdi-account-card-details', title: 'Contact Info' },
-          { icon: 'mdi-clippy',               title: 'Help' },
+          // { icon: 'mdi-certificate',          title: 'Resume' },
+          // { icon: 'mdi-certificate',          title: 'Certifications' },
+          // { icon: 'mdi-gmail',                title: 'Email' },
+          // { icon: 'mdi-account-card-details', title: 'Contact Info' },
+          // { icon: 'mdi-clippy',               title: 'Help' },
         ],
         imgSrc: 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
         images: [
