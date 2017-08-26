@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css" />
   <!-- <link href="./styles/vuetify.min.css" rel="stylesheet" type="text/css"></link> -->
   <link href="./styles/vuetify.custom.css" rel="stylesheet" type="text/css"></link>
-  <link rel="icon" type="image/png" href="./assets/favicon.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
 </head>
 <body>
   <div id="app">
     <v-app dark>
       <v-navigation-drawer
-        temporary
+        persistent
         :mini-variant="miniVariant"
         :clipped="clipped"
         v-model="drawer">
@@ -72,7 +72,7 @@
                     <li> The secret ingredient in my world-famous div soup is love. </li>
                     <li> I have a <strong>intense</strong> interest in Latin placeholder text... </li>
                   </ul>
-                  <!-- <v-subheader> Skills </v-subheader>
+                  <v-subheader> Skills </v-subheader>
                   <ul>
                     <li> API Consumption & Integration </li>
                   </ul>
@@ -83,7 +83,7 @@
                   <v-subheader> Maintainability & Scalablilty </v-subheader>
                   <ul>
                     <li>  </li>
-                  </ul> -->
+                  </ul>
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -93,7 +93,7 @@
               <v-flex xs12 md8 class="mt-5">
                 <v-card>
                   <v-container fluid>
-                    <v-parallax class="elevation-0" src="./assets/clay.jpg">
+                    <v-parallax class="elevation-0" src="./clay.jpg">
                       <v-layout column align-center justify-center>
                         <!-- <h1 class="primary--text text-xs-center"> Clay Dunston </h1> -->
                       </v-layout>
@@ -164,9 +164,6 @@
                     multi-line>
                   </v-text-field>
                   <!-- <small>*indicates required field</small> -->
-                  <v-layout column nowrap align-center class="pb-2">  
-                    <v-btn large class="primary text-xs-center"> Send </v-btn>    
-                  </v-layout>
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -196,6 +193,7 @@
                 </v-card>
               </v-flex>
             </v-layout>
+
         </v-container>
       </main>
       <v-footer class="pa-3 mt-5 primary secondary--text">

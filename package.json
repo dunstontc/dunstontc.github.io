@@ -6,7 +6,9 @@
   "scripts": {
     "test": "nodemon",
     "scss": "sass ./sass/index.scss ./index.css --sourcemap=none",
-    "old-scss": "sass ./old-sass/index.scss ./index.css --sourcemap=none"
+    "old-scss": "sass ./old-sass/index.scss ./index.css --sourcemap=none",
+    "stylus"      : "stylus ./styles/index.styl -o ./styles/vuetify.custom.css",
+    "stylus:watch": "stylus -w ./styles/index.styl -o ./styles/vuetify.custom.css"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/dunstontc/dunstontc.github.io/issues"
   },
-  "homepage": "https://github.com/dunstontc/dunstontc.github.io#readme"
+  "homepage": "https://github.com/dunstontc/dunstontc.github.io#readme",
+  "dependencies": {
+    "vue": "^2.4.2",
+    "vuetify": "^0.14.11"
+  }
 }
