@@ -10,6 +10,11 @@ a {
   width: 175px;
   background: transparent;
 }
+@media (max-width: 576px) {
+  .svg-container {
+    width: 50px;
+  }
+}
 .logos-container {
   display: flex;
   flex-flow: row wrap;
