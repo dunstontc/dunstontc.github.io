@@ -1,6 +1,6 @@
 {
   "name": "dunstontc.github.io",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "repo for dtc.github.io on github pages",
   "main": "index.js",
   "scripts": {
