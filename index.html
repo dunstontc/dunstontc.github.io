@@ -50,8 +50,8 @@
         <v-container fluid>
 <!-- ================================================================= -->
           <v-layout row align-center justify-center>
-            <v-flex xs12 s12 m12 l12 xl12>
-              <v-parallax class="elevation-0" :src="imgSrc">
+            <v-flex xs12 sm12 m12 l12 xl12>
+              <v-parallax class="elevation-1" :src="imgSrc">
                 <v-layout column align-center justify-center>
                   <h1 class="primary--text text-xs-center"> Clay Dunston </h1>
                 </v-layout>
@@ -61,7 +61,7 @@
 <!-- ======================================================================= -->
           <v-layout row align-center justify-center>
             <v-flex xs12 md10 class="mt-5">
-              <v-card dark>
+              <v-card dark class="elevation-1">
                 <v-toolbar class="primary">
                   <v-toolbar-title class="secondary--text"> About Me </v-toolbar-title>
                 </v-toolbar>
@@ -109,13 +109,17 @@
 <!-- ======================================================================= -->        
           <v-layout row align-center justify-center>
               <v-flex xs12 md8 class="mt-5">
-                <v-card>
+                <v-card class="elevation-1">
                   <v-container fluid>
-                    <v-parallax class="elevation-0" src="./assets/clay.jpg">
-                      <v-layout column align-center justify-center>
-                        <!-- <h1 class="primary--text text-xs-center"> Clay Dunston </h1> -->
-                      </v-layout>
-                    </v-parallax>
+                    <!-- <v-layout> -->
+                      <!-- <v-flex xs11> -->
+                        <v-parallax class="elevation-0" src="./assets/clay.jpg">
+                          <v-layout column align-center justify-center>
+                            <!-- <h1 class="primary--text text-xs-center"> Clay Dunston </h1> -->
+                          </v-layout>
+                        </v-parallax>
+                      <!-- </v-flex> -->
+                    <!-- </v-layout> -->
                   </v-container>
                   <v-list two-line>
                     <v-list-tile>
@@ -169,7 +173,7 @@
             </v-layout>
 <!-- ======================================================================= -->
           <v-layout row align-center justify-center>      
-              <v-flex xs12 class="mt-5">
+              <v-flex xs12 sm10 m10 l10 class="mt-5">
                 <v-card class="grid">
                   <v-toolbar class="primary elevation-1">
                     <v-toolbar-title class="secondary--text">Technology </v-toolbar-title>
