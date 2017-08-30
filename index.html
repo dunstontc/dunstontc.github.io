@@ -63,13 +63,12 @@
             <v-flex xs12 md10 class="mt-5">
               <v-card dark>
                 <v-toolbar class="primary">
-                    <v-toolbar-title class="secondary--text"> About Me </v-toolbar-title>
+                  <v-toolbar-title class="secondary--text"> About Me </v-toolbar-title>
                 </v-toolbar>
                 <v-divider class="indigo lighten-1"></v-divider>
                 <v-card-text>
                   <h4 class="mt-4 white--text"> Things I know a bit about: </h4>
                   <ul>
-                    <!-- <li> Immutible Data </li> -->
                     <li> SPAs, PWAs, & MVC </li>
                     <!-- <li> Server-Side Rendering </li> -->
                     <li> Cloud Architecture, PaaS, IaaS, & SaaS </li>
@@ -85,7 +84,7 @@
                     <li> I tend to accumulate more tabs than my browser knows what to do with. </li>
                     <li> I believe that the only tabs one should leave open are bar tabs (Assuming that one is someone other than oneself).</li>
                     <li> The secret ingredient in my world-famous div soup is love. </li>
-                    <!-- <li> I have a <strong>intense</strong> interest in Latin placeholder text... </li> -->
+                    <!-- <li> I have an <strong>intense</strong> interest in Latin placeholder text... </li> -->
                     <li> There's nothing I love more than a good list. </li>
                   </ul>
 
@@ -170,7 +169,7 @@
             </v-layout>
 <!-- ======================================================================= -->
           <v-layout row align-center justify-center>      
-              <v-flex xs11 class="mt-5">
+              <v-flex xs12 class="mt-5">
                 <v-card class="grid">
                   <v-toolbar class="primary elevation-1">
                     <v-toolbar-title class="secondary--text">Technology </v-toolbar-title>
@@ -179,7 +178,6 @@
                       <v-icon class="secondary--text">search</v-icon>
                     </v-btn> -->
                   </v-toolbar>
-                  <!-- <v-subheader>Test</v-subheader> -->
                   <v-container fluid grid-list-md class="mt-4">
                     <v-layout row wrap class="logos-container">
                         <div class="svg-container" v-for="i of logos" :key="i">
@@ -248,7 +246,7 @@
         <v-spacer></v-spacer>
         <div> <v-icon light alt="Hosted" title="Hosted">mdi-cloud</v-icon> with <v-icon light alt="Love" title="Love">mdi-heart</v-icon> by </div>
         &nbsp;
-        <a href="https://vuetifyjs.com/" target="_blank" alt="GitHub" title="GitHub"><v-icon light>mdi-github-circle</v-icon></a>
+        <a href="https://github.com/" target="_blank" alt="GitHub" title="GitHub"><v-icon light>mdi-github-circle</v-icon></a>
         <!-- <v-spacer></v-spacer> -->
         <!-- <div> &copy; {{ new Date().getFullYear() }} </div> -->
       </v-footer>
@@ -276,23 +274,20 @@
     new Vue({
       el: '#app',
       data: {
-        title: ' ',
-        drawer     : false,
-        snackbar   : false,
-        logos: logoArray,
+        title   : ' ',
+        drawer  : false,
+        snackbar: false,
+        logos   : logoArray,
+        imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',        
         accounts: [
           { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },          
           { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },          
           { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },          
           { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },          
           // { icon: 'mdi-twitter-box',     title: 'Twitter' },          
-          // { icon: 'mdi-google-plus-box', title: 'Google +' },          
-          // { icon: 'mdi-tumblr',          title: 'Tumblr' },          
-          // { icon: 'mdi-dribbble',        title: 'Dribbble' },          
-          // { icon: 'mdi-playstation',     title: 'PSN' },          
-          // { icon: 'mdi-xbox',            title: 'Xbox Live' },          
+          // { icon: 'mdi-google-plus-box', title: 'Google +' },                 
         ],
-        itemz: [
+        itemz   : [
           { icon: 'home',                     title: 'Home' },
           // { icon: 'mdi-certificate',          title: 'Resume' },
           // { icon: 'mdi-certificate',          title: 'Certifications' },
@@ -300,17 +295,11 @@
           // { icon: 'mdi-account-card-details', title: 'Contact Info' },
           // { icon: 'mdi-clippy',               title: 'Help' },
         ],
-        imgSrc: 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
-        images: [
-          'https://github.com/dunstontc/assets/blob/master/images/matt-howard-248418.jpg?raw=true',
-          'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
-          'https://raw.githubusercontent.com/dunstontc/assets/master/images/outer-space.jpg',
-        ],
         contactName   : '',
         contactEmail  : '',
         contactSubject: '',
         contactMessage: '',
-        rules: {
+        rules         : {
           required: (value) => !!value || 'Required.',
           email: (value) => {
             const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
