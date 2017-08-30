@@ -264,7 +264,9 @@
         vertical
         class="primary mt-2"
         v-model="snackbar">
-        <v-btn flat class="secondary--text" @click.native="snackbar = false"> Welcome Home <3 </v-btn>
+        <div>
+          <v-btn flat class="secondary--text" @click.native="snackbar = false"> Welcome Home <3 </v-btn>
+        </div>
       </v-snackbar>
     </v-app>
   </div>
