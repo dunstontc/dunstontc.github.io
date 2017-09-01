@@ -71,10 +71,10 @@
                   <ul>
                     <li> SPAs, PWAs, & MVC </li>
                     <!-- <li> Server-Side Rendering </li> -->
-                    <li> Cloud Architecture, PaaS, IaaS, & SaaS </li>
+                    <li> Cloud Architecture, IaaS, & PaaS </li>
                     <li> API design, consumption, & integration </li>
-                    <li> Unit testing & Continuous Integration </li>
-                    <li> Database design, maintenance, & integration;<br> both SQL and NoSQL </li>
+                    <!-- <li> Unit testing & Continuous Integration </li> -->
+                    <li> Database design, maintenance, & integration;<br> SQL and NoSQL </li>
                     <li> And before you ask, yes: &nbsp; <em> jQuery </em> &nbsp; <span class="grey--text text--darken-2">;)</span> </li>
                   </ul>
 
@@ -84,7 +84,7 @@
                     <li> Thoroughly enjoy the tab button. </li>
                     <li> I tend to accumulate more tabs than my browser knows what to do with. </li>
                     <li> I believe that the only tabs one should leave open are bar tabs (Assuming that one is someone other than oneself).</li>
-                    <li> The secret ingredient in my world-famous div soup is love. </li>
+                    <!-- <li> The secret ingredient in my world-famous div soup is love. </li> -->
                     <!-- <li> I have an <strong>intense</strong> interest in Latin placeholder text... </li> -->
                     <li> There's nothing I love more than a good list. </li>
                   </ul>
@@ -111,16 +111,16 @@
           <v-layout row align-center justify-center>
               <v-flex xs12 sm12 md8 class="mt-5">
                 <v-card class="elevation-1">
-                  <v-container fluid>
-                    <!-- <v-layout> -->
-                      <!-- <v-flex xs11> -->
+                  <v-container fluid class="pt-5">
+                    <v-layout align-center justify-center>
+                      <v-flex xs11>
                         <v-parallax class="elevation-0" src="./assets/clay.jpg">
-                          <v-layout column align-center justify-center>
+                          <!-- <v-layout column align-center justify-center> -->
                             <!-- <h1 class="primary--text text-xs-center"> Clay Dunston </h1> -->
-                          </v-layout>
+                          <!-- </v-layout> -->
                         </v-parallax>
-                      <!-- </v-flex> -->
-                    <!-- </v-layout> -->
+                      </v-flex>
+                    </v-layout>
                   </v-container>
                   <v-list two-line>
                     <v-list-tile>
@@ -160,9 +160,9 @@
                       <span class="group">
                           <v-btn
                               v-for="i in accounts" :key="i"
-                              icon tag="a" :href="i.url"
+                              icon tag="a" :href="i.url" target="_blank"
                               class="ml-3 mr-3">
-                              <v-icon medium class="white--text">
+                              <v-icon medium class="primary--text">
                                 {{i.icon}}  
                               </v-icon> 
                           </v-btn>
@@ -303,6 +303,13 @@
           // { icon: 'mdi-gmail',                title: 'Email' },
           // { icon: 'mdi-account-card-details', title: 'Contact Info' },
           // { icon: 'mdi-clippy',               title: 'Help' },
+        ],
+        projects: [
+          {
+            title      : 'VS Code Syntax for Atom',
+            link       : 'https://atom.io/themes/dark-plus-syntax',
+            description: "VS Code's 'Dark+' (default dark) theme on Atom"
+          }
         ],
         contactName   : '',
         contactEmail  : '',
