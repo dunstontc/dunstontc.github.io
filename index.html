@@ -2,14 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <title> Clay Dunston </title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clay Dunston</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' type="text/css" />
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css" />
-  <!-- <link href="./styles/vuetify.min.css" rel="stylesheet" type="text/css"></link> -->
-  <link href="./styles/vuetify.custom.css" rel="stylesheet" type="text/css"></link>
-  <link rel="icon" type="image/png" href="./assets/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="./styles/vuetify.custom.css" type="text/css" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" sizes="32x32" />
 </head>
 <body>
   <div id="app">
@@ -18,19 +17,31 @@
         temporary
         v-model="drawer">
         <v-list>
-          <v-list-item
+          <v-subheader> Pages </v-subheader>
+          <v-list-tile 
             v-for="i in itemz"
             :key="i"
-          >
-            <v-list-tile value="true" @click="snackbar = true">
+            @click="snackbar = true">
+            <v-list-tile-action>
+              <v-icon v-html="i.icon"></v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title v-text="i.title"></v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-divider></v-divider>
+          <v-subheader> Projects </v-subheader>
+          <v-list-tile 
+            v-for="i in projects"
+            :key="i"
+            :href="i.link">
               <v-list-tile-action>
-                <v-icon  v-html="i.icon"></v-icon>
+                <v-icon v-html="i.icon"></v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title v-text="i.title"></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-          </v-list-item>
         </v-list>
       </v-navigation-drawer>
       <v-toolbar>
@@ -297,7 +308,7 @@
           // { icon: 'mdi-google-plus-box', title: 'Google +' },                 
         ],
         itemz   : [
-          { icon: 'home',                     title: 'Home' },
+          { icon: 'home',                     title: 'Home', url: '' },
           // { icon: 'mdi-certificate',          title: 'Resume' },
           // { icon: 'mdi-certificate',          title: 'Certifications' },
           // { icon: 'mdi-gmail',                title: 'Email' },
@@ -306,9 +317,16 @@
         ],
         projects: [
           {
-            title      : 'VS Code Syntax for Atom',
-            link       : 'https://atom.io/themes/dark-plus-syntax',
-            description: "VS Code's 'Dark+' (default dark) theme on Atom"
+            icon       : 'mdi-code-braces',
+            title      : 'Atom VS Code Syntax',
+            link       : 'https://dunstontc.github.io/atom-vscode-syntax',
+            description: 'VS Code\'s \'Dark+\' (default dark) theme on Atom'
+          },
+          {
+            icon       : 'mdi-emoticon-cool',
+            title      : 'Awesome Sauce',
+            link       : 'https://github.com/dunstontc/awesome-sauce',
+            description: ''
           }
         ],
         contactName   : '',

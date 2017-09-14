@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/dunstontc/dunstontc.github.io/issues"
   },
-  "homepage": "https://github.com/dunstontc/dunstontc.github.io#readme",
+  "homepage": "https://dunstontc.github.io",
   "dependencies": {
     "vue": "^2.4.2",
     "vuetify": "^0.14.11"
