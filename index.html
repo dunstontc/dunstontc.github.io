@@ -18,7 +18,7 @@
         v-model="drawer">
         <v-list>
           <v-subheader> Pages </v-subheader>
-          <v-list-tile 
+          <v-list-tile
             v-for="i in itemz"
             :key="i"
             @click="snackbar = true">
@@ -31,7 +31,7 @@
           </v-list-tile>
           <v-divider></v-divider>
           <v-subheader> Projects </v-subheader>
-          <v-list-tile 
+          <v-list-tile
             v-for="i in projects"
             :key="i"
             :href="i.link">
@@ -118,7 +118,7 @@
               </v-card>
             </v-flex>
           </v-layout>
-<!-- ======================================================================= -->        
+<!-- ======================================================================= -->
           <v-layout row align-center justify-center>
               <v-flex xs12 sm12 md8 class="mt-5">
                 <v-card class="elevation-1">
@@ -164,7 +164,7 @@
                         <v-list-tile-sub-title> Birmingham, AL 35226 </v-list-tile-sub-title>
                       </v-list-tile-content>
                     </v-list-tile>
-                    <v-divider inset></v-divider>         
+                    <v-divider inset></v-divider>
                   </v-list>
                   <v-container fluid>
                     <v-layout justify-space-around>
@@ -174,8 +174,8 @@
                               icon tag="a" :href="i.url" target="_blank"
                               class="ml-3 mr-3">
                               <v-icon medium class="primary--text">
-                                {{i.icon}}  
-                              </v-icon> 
+                                {{i.icon}}
+                              </v-icon>
                           </v-btn>
                       </span>
                     </v-layout>
@@ -184,7 +184,7 @@
               </v-flex>
             </v-layout>
 <!-- ======================================================================= -->
-          <v-layout row align-center justify-center>      
+          <v-layout row align-center justify-center>
               <v-flex xs12 sm12 md10 lg10 class="mt-5">
                 <v-card class="grid">
                   <v-toolbar class="primary elevation-1">
@@ -237,16 +237,16 @@
                       multi-line>
                     </v-text-field>
                     <!-- <small>*indicates required field</small> -->
-                    <v-layout column nowrap align-center class="pb-2">  
-                      <v-btn disabled class="text-xs-center"> Send </v-btn>    
+                    <v-layout column nowrap align-center class="pb-2">
+                      <v-btn disabled class="text-xs-center"> Send </v-btn>
                     </v-layout>
                   </v-card-text>
                 </v-card>
               </v-flex>
             </v-layout>
-        </v-container>        
+        </v-container>
       </main>
-<!-- ======================================================================= -->      
+<!-- ======================================================================= -->
       <v-footer class="pa-3 mt-5 primary secondary--text">
         <a href="https://vuetifyjs.com/" class="mt-1 secondary--text" target="_blank" alt="Vuetify" title="Vuetify">
           created with &nbsp;
@@ -268,7 +268,7 @@
         <!-- <v-spacer></v-spacer> -->
         <!-- <div> &copy; {{ new Date().getFullYear() }} </div> -->
       </v-footer>
-<!-- ======================================================================= -->      
+<!-- ======================================================================= -->
       <v-snackbar
         timeout="2000"
         top
@@ -298,14 +298,14 @@
         drawer  : false,
         snackbar: false,
         logos   : logoArray,
-        imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',        
+        imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
         accounts: [
-          { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },          
-          { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },          
-          { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },          
-          { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },          
-          // { icon: 'mdi-twitter-box',     title: 'Twitter' },          
-          // { icon: 'mdi-google-plus-box', title: 'Google +' },                 
+          { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },
+          { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },
+          { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },
+          { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },
+          // { icon: 'mdi-twitter-box',     title: 'Twitter' },
+          // { icon: 'mdi-google-plus-box', title: 'Google +' },
         ],
         itemz   : [
           { icon: 'home',                     title: 'Home', url: '' },
@@ -319,7 +319,7 @@
           {
             icon       : 'mdi-code-braces',
             title      : 'Atom VS Code Syntax',
-            link       : 'https://dunstontc.github.io/atom-vscode-syntax',
+            link       : 'https://atom.io/themes/dark-plus-syntax',
             description: 'VS Code\'s \'Dark+\' (default dark) theme on Atom'
           },
           {
