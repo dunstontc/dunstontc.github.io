@@ -4,4 +4,6 @@ Icon?
 node_modules/**
 bower_components/**
 
+ignore/**
+
 **/.sass-cache
