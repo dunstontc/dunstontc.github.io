@@ -113,7 +113,7 @@
                     <li>  </li>
                   </ul> -->
                   <br>
-                  <v-btn class="primary secondary--text" tag="a" href="https://drive.google.com/file/d/0B4VVqr5z6UhjQi1OTFdwVUMtdTg/view" target="_blank"> My Resume </v-btn>
+                  <v-btn class="primary secondary--text" tag="a" :href="resume" target="_blank"> My Resume </v-btn>
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -188,7 +188,7 @@
               <v-flex xs12 sm12 md10 lg10 class="mt-5">
                 <v-card class="grid">
                   <v-toolbar class="primary elevation-1">
-                    <v-toolbar-title class="secondary--text">Technology </v-toolbar-title>
+                    <v-toolbar-title class="secondary--text"> Technology </v-toolbar-title>
                     <v-spacer></v-spacer>
                     <!-- <v-btn icon light>
                       <v-icon class="secondary--text">search</v-icon>
@@ -197,7 +197,11 @@
                   <v-container fluid grid-list-md class="mt-4">
                     <v-layout row wrap class="logos-container">
                         <div class="svg-container" v-for="i of logos" :key="i">
-                          <a :id="i.id" :alt="i.title" :title="i.title" v-bind:href="i.link" target="_blank">
+                          <a :id="i.id"
+                             :alt="i.title"
+                             :title="i.title"
+                             v-bind:href="i.link"
+                             target="_blank">
                             <div v-html="i.content"></div>
                           </a>
                         </div>
@@ -298,14 +302,13 @@
         drawer  : false,
         snackbar: false,
         logos   : logoArray,
+        resume  : 'https://drive.google.com/open?id=0B4VVqr5z6UhjVmY1WmtJb2xqeE0',
         imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
         accounts: [
           { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },
           { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },
           { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },
           { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },
-          // { icon: 'mdi-twitter-box',     title: 'Twitter' },
-          // { icon: 'mdi-google-plus-box', title: 'Google +' },
         ],
         itemz   : [
           { icon: 'home',                     title: 'Home', url: '' },
