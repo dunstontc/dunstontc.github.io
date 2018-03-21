@@ -452,7 +452,7 @@ a {
   color: rgba(0,0,0,0.7);
 }
 .application--light .tabs .tabs__item.tabs__item--active {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .application--light .tabs .tabs__item.tabs__item--disabled {
   color: rgba(0,0,0,0.26);
@@ -1205,7 +1205,7 @@ a {
   color: rgba(0,0,0,0.7);
 }
 .application .theme--light.tabs .tabs__item.tabs__item--active {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .application .theme--light.tabs .tabs__item.tabs__item--disabled {
   color: rgba(0,0,0,0.26);
@@ -1677,14 +1677,14 @@ a {
   color: rgba(255,255,255,0.7) !important;
 }
 .primary {
-  background-color: #5c6bc0 !important;
-  border-color: #5c6bc0 !important;
+  background-color: #608b4e !important;
+  border-color: #608b4e !important;
 }
 .primary--text {
-  color: #5c6bc0 !important;
+  color: #608b4e !important;
 }
 .primary--after:after {
-  background: #5c6bc0 !important;
+  background: #608b4e !important;
 }
 .accent {
   background-color: #1de9b6 !important;
@@ -5533,7 +5533,7 @@ video {
   transform: scale(0) rotate(-45deg);
 }
 blockquote {
-  border-left: 5px solid #5c6bc0;
+  border-left: 5px solid #608b4e;
   padding: 16px 0 16px 24px;
   font-size: 18px;
   font-weight: 300;
@@ -5590,7 +5590,7 @@ main {
   will-change: padding-left;
 }
 a {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 ::-ms-clear,
 ::-ms-reveal {
@@ -5864,7 +5864,7 @@ p {
   font-family: 'Roboto', sans-serif;
   top: -11px;
   right: -22px;
-  background-color: #5c6bc0;
+  background-color: #608b4e;
   border-radius: 50%;
   height: 22px;
   width: 22px;
@@ -5897,7 +5897,7 @@ p {
   top: initial;
 }
 .bottom-nav {
-  background: #5c6bc0;
+  background: #608b4e;
   bottom: 0;
   box-shadow: 0 3px 14px 2px rgba(0,0,0,0.12);
   display: flex;
@@ -6000,7 +6000,7 @@ p {
 }
 .breadcrumbs__item {
   align-items: center;
-  color: #5c6bc0;
+  color: #608b4e;
   display: inline-flex;
   font-size: 14px;
   padding: 0 14px;
@@ -6630,10 +6630,10 @@ p {
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .picker--date__years li:hover {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .picker--date__years li.active {
-  color: #5c6bc0;
+  color: #608b4e;
   font-size: 24px;
   font-weight: 500;
   margin: 20px 0;
@@ -6739,14 +6739,14 @@ p {
   z-index: 1;
 }
 .picker--date table .btn.btn--current:not(.btn--active) {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .picker--date table .btn.btn--floating {
   height: 32px;
   width: 32px;
 }
 .picker--date table .btn.btn--floating:after {
-  background: #5c6bc0 !important;
+  background: #608b4e !important;
   opacity: 0;
   transform: scale(0);
 }
@@ -6761,7 +6761,7 @@ p {
   color: #fff;
 }
 .picker--date table .btn.btn--floating.btn--active:after {
-  background: #5c6bc0 !important;
+  background: #608b4e !important;
   opacity: 1;
   transform: none;
 }
@@ -6993,7 +6993,7 @@ p {
   cursor: pointer;
 }
 .input-group.input-group--focused .input-group__input .icon {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .input-group--disabled .input-group__details:before {
   background-color: transparent;
@@ -7003,11 +7003,11 @@ p {
 }
 .input-group.input-group--text-field:not(.input-group--single-line):not(.input-group--error).input-group--focused label,
 .input-group.input-group--text-field:not(.input-group--single-line):not(.input-group--error):focus label {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .input-group.input-group--text-field:not(.input-group--single-line):not(.input-group--error).input-group--focused textarea,
 .input-group.input-group--text-field:not(.input-group--single-line):not(.input-group--error):focus textarea {
-  border-color: #5c6bc0;
+  border-color: #608b4e;
 }
 .input-group.input-group--text-field.input-group--focused:not(.input-group--disabled) .input-group__details:after,
 .input-group.input-group--text-field:focus:not(.input-group--disabled) .input-group__details:after {
@@ -7059,7 +7059,7 @@ p {
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-group__details:after {
-  background-color: #5c6bc0;
+  background-color: #608b4e;
   top: 0;
   height: 2px;
   transform: scaleX(0);
@@ -7203,7 +7203,7 @@ a.list__tile:hover,
   justify-content: flex-end;
 }
 .list__tile--active {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .list__tile--disabled {
   opacity: 0.4 !important;
@@ -7278,7 +7278,7 @@ a.list__tile:hover,
   padding-left: 72px;
 }
 .list--group .list__tile--active .list__tile__title {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 .list--group__header + .list--group:after {
   opacity: 1;
@@ -7535,7 +7535,7 @@ a.list__tile:hover,
   color: inherit;
 }
 > .list .list__tile--active > *:first-child .icon {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 > .list .list--group .list__tile {
   font-weight: 400;
@@ -7544,10 +7544,10 @@ a.list__tile:hover,
   background: transparent;
 }
 > .list .list--group__header--active .list__tile__action:first-of-type .icon {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 > .list .list--group__container .list__tile--active .list__tile__title {
-  color: #5c6bc0;
+  color: #608b4e;
 }
 > .list:not(.list--dense) .list__tile {
   font-size: 14px;
@@ -7630,7 +7630,7 @@ a.list__tile:hover,
 }
 .pagination__item--active {
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px rgba(0,0,0,0.14), 0 1px 10px rgba(0,0,0,0.12);
-  background: #5c6bc0;
+  background: #608b4e;
   color: #fff;
 }
 .pagination__navigation {
@@ -7707,7 +7707,7 @@ a.list__tile:hover,
   margin-top: -20px;
 }
 .picker__title {
-  background: #5c6bc0;
+  background: #608b4e;
   color: #fff;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -7880,14 +7880,14 @@ a.list__tile:hover,
   position: relative;
 }
 .progress-linear .progress-linear__bar {
-  background: #adb5e0;
+  background: #adcaa1;
 }
 .progress-linear .progress-linear__bar__determinate {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .progress-linear .progress-linear__bar__indeterminate .long,
 .progress-linear .progress-linear__bar__indeterminate .short {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .progress-linear__bar {
   width: 100%;
@@ -8434,7 +8434,7 @@ a.list__tile:hover,
   flex: 1 1 auto;
 }
 .input-group--slider:not(.input-group--disabled).input-group--dirty .slider__track-fill {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .input-group--slider.input-group--active .slider__thumb {
   transform: translateY(-50%) scale(1.2);
@@ -8457,11 +8457,11 @@ a.list__tile:hover,
   opacity: 1;
 }
 .input-group--slider.input-group--dirty .slider__thumb {
-  background: #5c6bc0;
-  border-color: #5c6bc0;
+  background: #608b4e;
+  border-color: #608b4e;
 }
 .input-group--slider.input-group--dirty .slider__thumb--label {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .input-group--slider.input-group--disabled {
   pointer-events: none;
@@ -8841,13 +8841,13 @@ a.list__tile:hover,
   transition: 0.3s cubic-bezier(0.4, 0, 0.6, 1);
 }
 .stepper__step--active .stepper__step__step {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .stepper__step--editable {
   cursor: pointer;
 }
 .stepper__step--complete .stepper__step__step {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .stepper__step.stepper__step--error {
   color: #d50000;
@@ -9143,7 +9143,7 @@ table.table tfoot tr {
   overflow: hidden !important;
 }
 .tabs__bar {
-  background-color: #5c6bc0;
+  background-color: #608b4e;
   width: 100%;
   position: relative;
   height: 48px;
@@ -9247,7 +9247,7 @@ table.table tfoot tr {
 }
 .input-group--text-field input,
 .input-group--text-field textarea {
-  caret-color: #5c6bc0;
+  caret-color: #608b4e;
   font-size: 16px;
 }
 .input-group--text-field input {
@@ -9510,7 +9510,7 @@ table.table tfoot tr {
 .picker--time__clock-hand {
   height: 40%;
   width: 2px;
-  background: #5c6bc0;
+  background: #608b4e;
   bottom: 50%;
   left: calc(50% - 1px);
   transform-origin: center bottom;
@@ -9518,7 +9518,7 @@ table.table tfoot tr {
 }
 .picker--time__clock-hand:before {
   background: transparent;
-  border: 2px solid #5c6bc0;
+  border: 2px solid #608b4e;
   border-radius: 100%;
   width: 10px;
   height: 10px;
@@ -9578,7 +9578,7 @@ table.table tfoot tr {
   cursor: default;
 }
 .picker--time__clock > span.active:before {
-  background: #5c6bc0;
+  background: #608b4e;
 }
 .picker--time__clock > span.disabled {
   color: rgba(0,0,0,0.3);

@@ -71,100 +71,17 @@
           </v-layout>
 <!-- ======================================================================= -->
           <v-layout row align-center justify-center>
-            <v-flex xs12 sm12 md10 class="mt-5">
-              <v-card dark class="elevation-1">
-                <v-toolbar class="primary">
-                  <v-toolbar-title class="secondary--text"> About Me </v-toolbar-title>
-                </v-toolbar>
-                <v-divider class="indigo lighten-1"></v-divider>
-                <v-card-text>
-                  <h4 class="mt-4 white--text"> Things I know a bit about: </h4>
-                  <ul>
-                    <li> SPAs, PWAs, & MVC </li>
-                    <li> Server-Side Rendering </li>
-                    <li> Cloud Architecture, IaaS, & PaaS </li>
-                    <li> API design, consumption, & integration </li>
-                    <li> Unit testing & Continuous Integration </li>
-                    <li> Database design, maintenance, & integration;<br> SQL and NoSQL </li>
-                    <!-- <li> And before you ask, yes: &#38;nbsp; <em> jQuery </em> &#38;nbsp; <span class="grey&#45;&#45;text text&#45;&#45;darken&#45;2">;)</span> </li> -->
-                  </ul>
-
-                  <h4 class="mt-3 white--text"> Fun Facts: </h4>
-                  <ul>
-                    <li> I don't believe in tab characters. </li>
-                    <li> Thoroughly enjoy the tab button. </li>
-                    <li> I tend to accumulate more tabs than my browser knows what to do with. </li>
-                    <li> I believe that the only tabs one should leave open are bar tabs (Assuming that one is someone other than oneself).</li>
-                    <!-- <li> The secret ingredient in my world-famous div soup is love. </li> -->
-                    <!-- <li> I have an <strong>intense</strong> interest in Latin placeholder text... </li> -->
-                    <li> There's nothing I love more than a good list. </li>
-                  </ul>
-
-                  <!-- <v-subheader> Skills </v-subheader>
-                  <ul>
-                    <li> API Consumption & Integration </li>
-                  </ul>
-                  <v-subheader> Security </v-subheader>
-                  <ul>
-                    <li><a href="https://tools.ietf.org/html/draft-ietf-oauth-v2-12"> OAuth </a></li>
-                  </ul>
-                  <v-subheader> Maintainability & Scalablilty </v-subheader>
-                  <ul>
-                    <li>  </li>
-                  </ul> -->
-                  <br>
-                  <v-btn class="primary secondary--text" tag="a" :href="resume" target="_blank"> My Resume </v-btn>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-layout>
-<!-- ======================================================================= -->
-          <v-layout row align-center justify-center>
               <v-flex xs12 sm12 md8 class="mt-5">
                 <v-card class="elevation-1">
-                  <v-container fluid class="pt-5">
-                    <v-layout align-center justify-center>
-                      <v-flex xs11>
-                        <v-parallax class="elevation-0" src="./assets/clay.jpg">
-                          <!-- <v-layout column align-center justify-center> -->
-                            <!-- <h1 class="primary--text text-xs-center"> Clay Dunston </h1> -->
-                          <!-- </v-layout> -->
-                        </v-parallax>
-                      </v-flex>
-                    </v-layout>
-                  </v-container>
-                  <v-list two-line>
-                    <v-list-tile>
-                      <v-list-tile-action><v-icon class="primary--text">phone</v-icon></v-list-tile-action>
-                      <v-list-tile-content>
-                        <v-list-tile-title> (205) 937-5804 </v-list-tile-title>
-                        <v-list-tile-sub-title> Cell </v-list-tile-sub-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  <v-divider inset></v-divider>
-                    <v-list-tile>
-                      <v-list-tile-action><v-icon class="primary--text">mail</v-icon></v-list-tile-action>
-                      <v-list-tile-content>
-                        <v-list-tile-title> dunstontc@gmail.com </v-list-tile-title>
-                        <v-list-tile-sub-title> Personal </v-list-tile-sub-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  <v-divider inset></v-divider>
-                    <v-list-tile>
-                      <v-list-tile-action><v-icon class="primary--text">location_on</v-icon></v-list-tile-action>
-                      <v-list-tile-content>
-                        <v-list-tile-title> 2705 Paden Trail </v-list-tile-title>
-                        <v-list-tile-sub-title> Birmingham, AL 35226 </v-list-tile-sub-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                    <v-divider inset></v-divider>
-                  </v-list>
                   <v-container fluid>
+                    <v-container>
+                      <figure><embed src="https://wakatime.com/share/@dunstontc/f6c3cb86-54e7-4c19-8174-30a167fe64cd.svg"></embed></figure>
+                    </v-container>
                     <v-layout justify-space-around>
                       <span class="group">
                           <v-btn
                               v-for="i in accounts" :key="i"
-                              icon tag="a" :href="i.url" target="_blank"
+                              icon tag="a" :href="i.url"
                               class="ml-3 mr-3">
                               <v-icon medium class="primary--text">
                                 {{i.icon}}
@@ -183,9 +100,9 @@
                   <v-toolbar class="primary elevation-1">
                     <v-toolbar-title class="secondary--text"> Technology </v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <!-- <v-btn icon light>
+                    <v-btn icon light>
                       <v-icon class="secondary--text">search</v-icon>
-                    </v-btn> -->
+                    </v-btn>
                   </v-toolbar>
                   <v-container fluid grid-list-md class="mt-4">
                     <v-layout row wrap class="logos-container">
@@ -193,8 +110,7 @@
                           <a :id="i.id"
                              :alt="i.title"
                              :title="i.title"
-                             v-bind:href="i.link"
-                             target="_blank">
+                             v-bind:href="i.link">
                             <div v-html="i.content"></div>
                           </a>
                         </div>
@@ -294,7 +210,8 @@
         title   : ' ',
         drawer  : false,
         snackbar: false,
-        logos   : logoArray,
+        <!-- logos   : logoArray, -->
+        logos   : logoArray.sort(() => Math.random() - 0.5),
         resume  : 'https://drive.google.com/open?id=0B4VVqr5z6UhjVmY1WmtJb2xqeE0',
         imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
         accounts: [
