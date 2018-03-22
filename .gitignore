@@ -4,6 +4,7 @@ Icon?
 node_modules/*
 bower_components/*
 
+.env
 ignore/*
 
 */.sass-cache
