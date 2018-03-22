@@ -6,12 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' type="text/css" />
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css" />
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css" type="text/css" />
   <link rel="stylesheet" href="./styles/vuetify.custom.css" type="text/css" />
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="./assets/favicon.png" sizes="32x32" />
 </head>
 <body>
@@ -66,8 +62,8 @@
         <v-toolbar-title v-text="title"></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn flat class="primary--text"> ᕕ( ᐛ )ᕗ </v-btn>
           <v-btn flat class="primary--text" @click="snackbar = true"> Home </v-btn>
-          <!-- <v-btn flat> ᕕ( ᐛ )ᕗ </v-btn> -->
         </v-toolbar-items>
       </v-toolbar>
       <main>
@@ -206,31 +202,28 @@ new Vue({
       { icon: 'mdi-linkedin-box',    title: 'LinkedIn', link: "https://www.linkedin.com/in/clay-dunston/" },
     ],
     itemz   : [
-      { icon: 'home',                        title: 'Home', url: '' },
-      // { icon: 'mdi-certificate',          title: 'Resume' },
-      // { icon: 'mdi-certificate',          title: 'Certifications' },
-      // { icon: 'mdi-gmail',                title: 'Email' },
-      // { icon: 'mdi-account-card-details', title: 'Contact Info' },
-      // { icon: 'mdi-clippy',               title: 'Help' },
+      { icon: '',                        title: '', url: '' },
     ],
     projects: [
       {
-        icon       : 'mdi-code-braces',
-        title      : 'Atom VS Code Syntax',
+        icon       : 'mdi-creation',
+        title      : 'Dark+ (atom)',
         link       : 'https://atom.io/themes/dark-plus-syntax',
-        description: 'VS Code\'s \'Dark+\' (default dark) theme on Atom'
       },
       {
-        icon       : 'mdi-emoticon-cool',
-        title      : 'Awesome Sauce',
-        link       : 'https://github.com/dunstontc/awesome-sauce',
-        description: ''
+        icon       : 'mdi-rocket',
+        title      : 'Projectile',
+        link       : 'https://github.com/dunstontc/projectile.nvim',
+      },
+      {
+        icon       : 'mdi-clippy',
+        title      : 'Dark+ (vscode)',
+        link       : 'https://marketplace.visualstudio.com/items?itemName=dunstontc.dark-plus-syntax',
       },
       {
         icon       : 'mdi-github-face',
         title      : 'GitHub Pages',
         link       : 'https://github.com/dunstontc/dunstontc.github.io',
-        description: ''
       },
     ],
   },
