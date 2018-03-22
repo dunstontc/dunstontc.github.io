@@ -1,9 +1,12 @@
 Icon?
-**/.DS_store
+*/.DS_store
 
-node_modules/**
-bower_components/**
+node_modules/*
+bower_components/*
 
-ignore/**
+.env
+ignore/*
 
-**/.sass-cache
+*/.sass-cache
+
+*/tags

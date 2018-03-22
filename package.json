@@ -7,7 +7,7 @@
     "test": "nodemon",
     "scss": "sass ./sass/index.scss ./index.css --sourcemap=none",
     "old-scss": "sass ./old-sass/index.scss ./index.css --sourcemap=none",
-    "stylus"      : "stylus ./styles/index.styl -o ./styles/vuetify.custom.css",
+    "stylus": "stylus ./styles/index.styl -o ./styles/vuetify.custom.css",
     "stylus:watch": "stylus -w ./styles/index.styl -o ./styles/vuetify.custom.css"
   },
   "repository": {
@@ -28,5 +28,8 @@
   "dependencies": {
     "vue": "^2.4.2",
     "vuetify": "^0.14.11"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5"
   }
 }
