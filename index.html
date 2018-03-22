@@ -8,6 +8,10 @@
   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' type="text/css" />
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css" />
   <link rel="stylesheet" href="./styles/vuetify.custom.css" type="text/css" />
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="./assets/favicon.png" sizes="32x32" />
 </head>
 <body>
@@ -73,22 +77,15 @@
           <v-layout row align-center justify-center>
               <v-flex xs12 sm12 md8 class="mt-5">
                 <v-card class="elevation-1">
-                  <v-container fluid>
-                    <v-container>
-                      <figure><embed src="https://wakatime.com/share/@dunstontc/f6c3cb86-54e7-4c19-8174-30a167fe64cd.svg"></embed></figure>
-                    </v-container>
-                    <v-layout justify-space-around>
-                      <span class="group">
-                          <v-btn
-                              v-for="i in accounts" :key="i"
-                              icon tag="a" :href="i.url"
-                              class="ml-3 mr-3">
-                              <v-icon medium class="primary--text">
-                                {{i.icon}}
-                              </v-icon>
-                          </v-btn>
-                      </span>
-                    </v-layout>
+                  <v-toolbar class="primary elevation-1">
+                    <v-toolbar-title class="secondary--text"> What I've Been Up To </v-toolbar-title>
+                  </v-toolbar>
+                  <v-container>
+                      <v-container>
+                        <figure><embed src="https://wakatime.com/share/@dunstontc/b1d612f5-12f9-4eee-ad2e-e816e32061f4.svg"></embed></figure>
+                        <br/>
+                        <figure><embed src="https://wakatime.com/share/@dunstontc/7f49ca15-91d7-47b4-8219-9d8b4c989a94.svg"></embed></figure>
+                      </v-container>
                   </v-container>
                 </v-card>
               </v-flex>
@@ -157,7 +154,27 @@
                 </v-card>
               </v-flex>
             </v-layout>
-        </v-container>
+<!-- ======================================================================= -->
+          <v-layout row align-center justify-center>
+              <v-flex xs12 sm12 md8 class="mt-5">
+                <v-card class="elevation-1">
+                    <v-layout justify-space-around>
+                      <span class="group">
+                          <v-btn
+                              v-for="i in accounts" :key="i"
+                              icon tag="a" :href="i.url"
+                              class="ml-3 mr-3">
+                              <v-icon medium class="primary--text">
+                                {{i.icon}}
+                              </v-icon>
+                          </v-btn>
+                      </span>
+                    </v-layout>
+                  </v-container>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
       </main>
 <!-- ======================================================================= -->
       <v-footer class="pa-3 mt-5 primary secondary--text">
@@ -199,68 +216,95 @@
   <script src="./scripts/vuetify.min.js"></script>
   <script src="./scripts/logos.js"></script>
 
-  <script>
-    Vue.component('page', {
-      template: '#page'
-    })
+<script>
 
-    new Vue({
-      el: '#app',
-      data: {
-        title   : ' ',
-        drawer  : false,
-        snackbar: false,
-        <!-- logos   : logoArray, -->
-        logos   : logoArray.sort(() => Math.random() - 0.5),
-        resume  : 'https://drive.google.com/open?id=0B4VVqr5z6UhjVmY1WmtJb2xqeE0',
-        imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
-        accounts: [
-          { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },
-          { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },
-          { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },
-          { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },
-        ],
-        itemz   : [
-          { icon: 'home',                     title: 'Home', url: '' },
-          // { icon: 'mdi-certificate',          title: 'Resume' },
-          // { icon: 'mdi-certificate',          title: 'Certifications' },
-          // { icon: 'mdi-gmail',                title: 'Email' },
-          // { icon: 'mdi-account-card-details', title: 'Contact Info' },
-          // { icon: 'mdi-clippy',               title: 'Help' },
-        ],
-        projects: [
-          {
-            icon       : 'mdi-code-braces',
-            title      : 'Atom VS Code Syntax',
-            link       : 'https://atom.io/themes/dark-plus-syntax',
-            description: 'VS Code\'s \'Dark+\' (default dark) theme on Atom'
-          },
-          {
-            icon       : 'mdi-emoticon-cool',
-            title      : 'Awesome Sauce',
-            link       : 'https://github.com/dunstontc/awesome-sauce',
-            description: ''
-          },
-          {
-            icon       : 'mdi-github-face',
-            title      : 'GitHub Pages',
-            link       : 'https://github.com/dunstontc/dunstontc.github.io',
-            description: ''
-          },
-        ],
-        contactName   : '',
-        contactEmail  : '',
-        contactSubject: '',
-        contactMessage: '',
-        rules         : {
-          required: (value) => !!value || 'Required.',
-          email: (value) => {
-            const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            return pattern.test(value) || 'Invalid e-mail.'
-          }
-        }
+const url = "";
+
+Vue.component('page', {
+  template: '#page'
+})
+
+new Vue({
+  el: '#app',
+  created: function () {
+    this.loadData();
+  },
+  data: {
+    title   : ' ',
+    drawer  : false,
+    snackbar: false,
+    logos   : logoArray,
+    // logos   : logoArray.sort(() => Math.random() - 0.5),
+    resume  : 'https://drive.google.com/open?id=0B4VVqr5z6UhjVmY1WmtJb2xqeE0',
+    imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
+    accounts: [
+      { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },
+      { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },
+      { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },
+      { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },
+    ],
+    itemz   : [
+      { icon: 'home',                        title: 'Home', url: '' },
+      // { icon: 'mdi-certificate',          title: 'Resume' },
+      // { icon: 'mdi-certificate',          title: 'Certifications' },
+      // { icon: 'mdi-gmail',                title: 'Email' },
+      // { icon: 'mdi-account-card-details', title: 'Contact Info' },
+      // { icon: 'mdi-clippy',               title: 'Help' },
+    ],
+    projects: [
+      {
+        icon       : 'mdi-code-braces',
+        title      : 'Atom VS Code Syntax',
+        link       : 'https://atom.io/themes/dark-plus-syntax',
+        description: 'VS Code\'s \'Dark+\' (default dark) theme on Atom'
+      },
+      {
+        icon       : 'mdi-emoticon-cool',
+        title      : 'Awesome Sauce',
+        link       : 'https://github.com/dunstontc/awesome-sauce',
+        description: ''
+      },
+      {
+        icon       : 'mdi-github-face',
+        title      : 'GitHub Pages',
+        link       : 'https://github.com/dunstontc/dunstontc.github.io',
+        description: ''
+      },
+    ],
+    contactName   : '',
+    contactEmail  : '',
+    contactSubject: '',
+    contactMessage: '',
+    rules         : {
+      required: (value) => !!value || 'Required.',
+      email: (value) => {
+        const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        return pattern.test(value) || 'Invalid e-mail.'
       }
-    })
-  </script>
+    }
+  },
+  methods: {
+    loadData: function (viewerUserId, posterUserId) {
+      $.ajax({
+        contentType: "application/json",
+        dataType: "json",
+        url: url,
+        data: JSON.stringify({testing: "some value"}),
+        type: 'GET',
+        crossDomain: true,
+        // success: function() { alert("Success"); },
+        // error: function() { alert('Failed!'); },
+        dataType: 'jsonp',
+        success: response => {
+          this.content = "loaded"
+          this.serverData = response.json
+        },
+        error: err => console.log('Error'),
+      });
+      return
+    }
+  }
+})
+</script>
 </body>
 </html>
