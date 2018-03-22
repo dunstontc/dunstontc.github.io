@@ -21,7 +21,7 @@
         temporary
         v-model="drawer">
         <v-list>
-          <v-subheader> Pages </v-subheader>
+          <v-subheader></v-subheader>
           <v-list-tile
             v-for="i in itemz"
             :key="i"
@@ -46,6 +46,19 @@
                 <v-list-tile-title v-text="i.title"></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
+        <v-divider></v-divider>
+        <v-subheader> Elsewhere </v-subheader>
+        <v-list-tile
+          v-for="i in accounts"
+          :key="i"
+          :href="i.link">
+            <v-list-tile-action>
+              <v-icon v-html="i.icon"></v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title v-text="i.title"></v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
         </v-list>
       </v-navigation-drawer>
       <v-toolbar>
@@ -54,9 +67,6 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn flat class="primary--text" @click="snackbar = true"> Home </v-btn>
-          <!-- <v-btn flat class="primary--text"> My Resume </v-btn> -->
-          <!-- <v-btn flat> About </v-btn> -->
-          <!-- <v-btn flat> Contact </v-btn> -->
           <!-- <v-btn flat> ᕕ( ᐛ )ᕗ </v-btn> -->
         </v-toolbar-items>
       </v-toolbar>
@@ -80,12 +90,10 @@
                   <v-toolbar class="primary elevation-1">
                     <v-toolbar-title class="secondary--text"> This Week's Stats: </v-toolbar-title>
                   </v-toolbar>
-                  <v-container>
-                      <v-container>
-                        <figure><embed src="https://wakatime.com/share/@dunstontc/b1d612f5-12f9-4eee-ad2e-e816e32061f4.svg"></embed></figure>
-                        <br/>
-                        <figure><embed src="https://wakatime.com/share/@dunstontc/7f49ca15-91d7-47b4-8219-9d8b4c989a94.svg"></embed></figure>
-                      </v-container>
+                  <v-container fluid>
+                    <figure><embed src="https://wakatime.com/share/@dunstontc/b1d612f5-12f9-4eee-ad2e-e816e32061f4.svg"></embed></figure>
+                    <br/>
+                    <figure><embed src="https://wakatime.com/share/@dunstontc/7f49ca15-91d7-47b4-8219-9d8b4c989a94.svg"></embed></figure>
                   </v-container>
                 </v-card>
               </v-flex>
@@ -97,9 +105,6 @@
                   <v-toolbar class="primary elevation-1">
                     <v-toolbar-title class="secondary--text"> Technology </v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-btn icon light>
-                      <v-icon class="secondary--text">search</v-icon>
-                    </v-btn>
                   </v-toolbar>
                   <v-container fluid grid-list-md class="mt-4">
                     <v-layout row wrap class="logos-container">
@@ -113,47 +118,9 @@
                         </div>
                     </v-layout>
                   </v-container>
-                  <v-footer class="primary mt-2"></v-footer>
                 </v-card>
               </v-flex>
             </v-layout>
-<!-- ======================================================================= -->
-            <!-- <v&#45;layout row align&#45;center justify&#45;center> <!&#45;&#45; TODO: This can be a loop &#45;&#45;> -->
-            <!--   <v&#45;flex xs12 sm12 md8 class="mt&#45;5"> -->
-            <!--     <v&#45;card> -->
-            <!--       <v&#45;toolbar class="primary"> -->
-            <!--         <v&#45;toolbar&#45;title class="secondary&#45;&#45;text"> Leave a Message </v&#45;toolbar&#45;title> -->
-            <!--       </v&#45;toolbar> -->
-            <!--       <v&#45;card&#45;text> -->
-            <!--         <v&#45;text&#45;field -->
-            <!--           class="mt&#45;3" -->
-            <!--           label="Your Name" -->
-            <!--           v&#45;model="contactName"> -->
-            <!--         </v&#45;text&#45;field> -->
-            <!--         <v&#45;text&#45;field -->
-            <!--           label="Your Email" -->
-            <!--           type="email" -->
-            <!--           v&#45;model="contactEmail"> -->
-            <!--           <!&#45;&#45; :rules="[rules.email]"> &#45;&#45;> -->
-            <!--         </v&#45;text&#45;field> -->
-            <!--         <v&#45;text&#45;field -->
-            <!--           label="Subject" -->
-            <!--           hint="You can leave this field blank if you'd like" -->
-            <!--           v&#45;model="contactSubject"> -->
-            <!--         </v&#45;text&#45;field> -->
-            <!--         <v&#45;text&#45;field -->
-            <!--           label="Message" -->
-            <!--           v&#45;model="contactMessage" -->
-            <!--           multi&#45;line> -->
-            <!--         </v&#45;text&#45;field> -->
-            <!--         <!&#45;&#45; <small>*indicates required field</small> &#45;&#45;> -->
-            <!--         <v&#45;layout column nowrap align&#45;center class="pb&#45;2"> -->
-            <!--           <v&#45;btn disabled class="text&#45;xs&#45;center"> Send </v&#45;btn> -->
-            <!--         </v&#45;layout> -->
-            <!--       </v&#45;card&#45;text> -->
-            <!--     </v&#45;card> -->
-            <!--   </v&#45;flex> -->
-            <!-- </v&#45;layout> -->
 <!-- ======================================================================= -->
           <v-layout row align-center justify-center>
               <v-flex xs12 sm12 md8 class="mt-5">
@@ -218,7 +185,6 @@
 
 <script>
 
-const url = "";
 
 Vue.component('page', {
   template: '#page'
@@ -226,22 +192,18 @@ Vue.component('page', {
 
 new Vue({
   el: '#app',
-  created: function () {
-    this.loadData();
-  },
   data: {
     title   : ' ',
     drawer  : false,
     snackbar: false,
-    logos   : logoArray,
-    // logos   : logoArray.sort(() => Math.random() - 0.5),
+    logos   : logoArray.sort(() => Math.random() - 0.5),
     resume  : 'https://drive.google.com/open?id=0B4VVqr5z6UhjVmY1WmtJb2xqeE0',
     imgSrc  : 'https://raw.githubusercontent.com/dunstontc/assets/master/images/Above-Ho-Chi-Minh-City-Vietnam.jpg',
     accounts: [
-      { icon: 'mdi-linkedin-box',    title: 'LinkedIn', url: "https://www.linkedin.com/in/clay-dunston/" },
-      { icon: 'mdi-github-circle',   title: 'GitHub',   url: "https://github.com/dunstontc" },
-      { icon: 'mdi-codepen',         title: 'Codepen',  url: "https://codepen.io/dunstontc" },
-      { icon: 'mdi-facebook-box',    title: 'Facebook', url: "https://www.facebook.com/clay.dunston" },
+      { icon: 'mdi-github-circle',   title: 'GitHub',   link: "https://github.com/dunstontc" },
+      { icon: 'mdi-codepen',         title: 'Codepen',  link: "https://codepen.io/dunstontc" },
+      { icon: 'mdi-facebook-box',    title: 'Facebook', link: "https://www.facebook.com/clay.dunston" },
+      { icon: 'mdi-linkedin-box',    title: 'LinkedIn', link: "https://www.linkedin.com/in/clay-dunston/" },
     ],
     itemz   : [
       { icon: 'home',                        title: 'Home', url: '' },
@@ -271,39 +233,7 @@ new Vue({
         description: ''
       },
     ],
-    contactName   : '',
-    contactEmail  : '',
-    contactSubject: '',
-    contactMessage: '',
-    rules         : {
-      required: (value) => !!value || 'Required.',
-      email: (value) => {
-        const pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        return pattern.test(value) || 'Invalid e-mail.'
-      }
-    }
   },
-  methods: {
-    loadData: function (viewerUserId, posterUserId) {
-      $.ajax({
-        contentType: "application/json",
-        dataType: "json",
-        url: url,
-        data: JSON.stringify({testing: "some value"}),
-        type: 'GET',
-        crossDomain: true,
-        // success: function() { alert("Success"); },
-        // error: function() { alert('Failed!'); },
-        dataType: 'jsonp',
-        success: response => {
-          this.content = "loaded"
-          this.serverData = response.json
-        },
-        error: err => console.log('Error'),
-      });
-      return
-    }
-  }
 })
 </script>
 </body>
