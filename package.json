@@ -29,6 +29,7 @@
     "vuetify": "^0.14.11"
   },
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "write-json-file": "^2.3.0"
   }
 }
