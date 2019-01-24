@@ -1618,10 +1618,10 @@ const logoArray = [
     title  : 'Ubuntu',
     link   : 'https://www.ubuntu.com/',
     content: `
-    <svg version="1.1"
+    <svg version="1.1 "
         id="circle_of_friends__x5F__orange"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="150%"
+        width="130%"
         height="100%"
         viewBox="0 0 425.197 425.197"
         enable-background="new 0 0 425.197 425.197"
@@ -1653,7 +1653,7 @@ const logoArray = [
     title  : 'CentOS',
     link   : 'https://www.centos.org/', // style="transform: translate(20%);"
     content: `
-    <svg id="svg4300" xmlns="http://www.w3.org/2000/svg" width="140%" height="100%" viewBox="0 0 222 222" style="transform: translate(-10%);">
+    <svg id="svg4300" xmlns="http://www.w3.org/2000/svg" width="120%" height="100%" viewBox="0 0 222 222" style="transform: translate(-10%);">
         <path id="path12808" d="M98.06542,106.27089l6.16924,6.13429-6.16924,6.13429H54.64417v20.43947L28.16361,112.40518l26.48057-26.126v19.9917Z" fill="#932279"/>
         <path id="path12774" d="M117.72771,99.0623l-6.13311,6.17043-6.13311-6.17043V55.63271H85.02593l26.56867-26.48565,26.121,26.48565H117.72771Z" fill="#efa724"/>
         <path id="path12784" d="M124.93492,118.72831l-6.16924-6.13429,6.16924-6.13429h43.42125V86.02026L194.83674,112.594,168.35617,138.72v-19.9917Z" fill="#262577"/>
